@@ -159,27 +159,6 @@ $places['CO'] = array(
 			"Villanueva",
 			"La Victoria" 
 		),
-	'BOG' => array(
-		'Antonio Nariño',
-		'Barrios Unidos',
-		'Chapinero',
-		'Ciudad Bolívar',
-		'Engativá‎',
-		'Fontibón‎',
-		'Kennedy',
-		'La Candelaria‎',
-		'Los Mártires',
-		'Puente Aranda',
-		'Rafael Uribe Uribe',
-		'San Cristóbal',
-		'Santa Fe',
-		'Suba',
-		'Sumapaz‎',
-		'Teusaquillo‎',
-		'Tunjuelito‎',
-		'Usaquén‎',
-		'Usme‎'
-		),
 	'BOY' => array(
 			"Tunja",
 			"Sogamoso",

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Departamentos y Ciudades de Colombia para Woocommerce
  * Description: Plugin modificado con los departementos y ciudades de Colombia
- * Version: 1.1
+ * Version: 1.1.2
  * Author: Saul Morales Pacheco
  * Author URI: https://saulmoralespa.com
  * Text Domain: woocommerce-extension
@@ -22,7 +22,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
   
 	class WC_States_Places {
 
-		const VERSION = '1.0.0';
+		const VERSION = '1.1.2';
 		private $states;
 		private $places;
 
@@ -38,10 +38,10 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 		*/
 		public function init() {
 			$this->init_states();
-			//$this->	init_places();
+			$this->	init_places();
 		}
 
-		/*
+		/**
 		* WC States init
 		*/
 		public function init_states() {
@@ -52,11 +52,11 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 		* WC States init
 		*/
 		public function init_places() {
-			//add_filter( 'woocommerce_billing_fields', array( $this, 'wc_billing_fields' ), 10, 2 );
-			//add_filter( 'woocommerce_shipping_fields', array( $this, 'wc_shipping_fields' ), 10, 2 );
-			//add_filter( 'woocommerce_form_field_city', array( $this, 'wc_form_field_city' ), 10, 4 );
+			add_filter( 'woocommerce_billing_fields', array( $this, 'wc_billing_fields' ), 10, 2 );
+			add_filter( 'woocommerce_shipping_fields', array( $this, 'wc_shipping_fields' ), 10, 2 );
+			add_filter( 'woocommerce_form_field_city', array( $this, 'wc_form_field_city' ), 10, 4 );
 
-			//add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ) );
 		}
 
 		/**
@@ -70,7 +70,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 
             if (!empty( $allowed ) ) {
                 foreach ($allowed as $code => $country) {
-                    if ( isset( $states[$code] ) && file_exists($this->get_plugin_path() . '/states/' . $code . '.php')) {
+                    if (! isset( $states[$code] ) && file_exists($this->get_plugin_path() . '/states/' . $code . '.php')) {
                         include($this->get_plugin_path() . '/states/' . $code . '.php');
                     }
                 }
