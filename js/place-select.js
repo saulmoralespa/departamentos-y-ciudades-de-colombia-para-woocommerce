@@ -1,4 +1,4 @@
-jQuery( function($) {
+( function($) {
 
   // wc_city_select_params is required to continue, ensure the object exists
   // wc_country_select_params is used for select2 texts. This one is added by WC
@@ -177,4 +177,4 @@ jQuery( function($) {
 
     $( document.body ).trigger( 'city_to_select' );
   }
-});
+})(jQuery);

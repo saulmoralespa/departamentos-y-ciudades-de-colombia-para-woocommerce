@@ -198,6 +198,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 
 			return $field;
 		}
+
  		/**
 	    * Get places
 	    * @param string $p_code(default:)
