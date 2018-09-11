@@ -24,8 +24,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
     /**
     * Instantiate class
     */
-    $state_place_CO = new WC_States_Places_Colombia(__FILE__);
-    $GLOBALS['wc_states_places'] = $state_place_CO;
+    $GLOBALS['wc_states_places'] = new WC_States_Places_Colombia(__FILE__);
 
 
 
