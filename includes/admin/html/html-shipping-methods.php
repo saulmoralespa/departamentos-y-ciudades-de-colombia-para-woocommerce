@@ -68,4 +68,3 @@ $methods = array();
             </table>
         </td>
     </tr>
-<?php

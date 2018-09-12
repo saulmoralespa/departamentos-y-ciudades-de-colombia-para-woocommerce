@@ -86,3 +86,6 @@ Only major cities of each department.
 * Eliminated localities of Bogotá D.C
 = 1.1.3 =
 * Added method shipping filter for city
+= 1.1.4 =
+* added languages Spanish Colombia and fixed state
+

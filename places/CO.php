@@ -415,6 +415,7 @@ $places['CO'] = array(
 			"San José de Uré"
 		),
 	'CUN' => array(
+	        "Bogotá D.C",
 			"Chía",
 			"Zipaquirá",
 			"Facatativá",

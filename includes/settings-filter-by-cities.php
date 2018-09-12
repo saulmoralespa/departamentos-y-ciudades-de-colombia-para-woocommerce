@@ -30,7 +30,7 @@ return array(
         )
     ),
     'cost' => array(
-        'title' => __('Coste', 'shipping-filter-by-cities'),
+        'title' => __('Coste', 'departamentos-y-ciudades-de-colombia-para-woocommerce'),
         'type' 			=> 'text',
         'description' 	=> $cost_desc,
         'default'		=> '0',
@@ -40,7 +40,7 @@ return array(
         'title' => __('Cities','shipping-filter-by-cities'),
         'type' => 'multiselect',
         'class'       => 'wc-enhanced-select',
-        'description' => __( 'Select the city referring to the region that you have previously added', 'shipping-filter-by-cities' ),
+        'description' => __( 'Select the city referring to the region that you have previously added', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),
         'options' => $this->showCitiesRegions(),
         'desc_tip'    => true,
     )

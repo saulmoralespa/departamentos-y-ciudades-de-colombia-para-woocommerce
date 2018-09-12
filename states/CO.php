@@ -15,7 +15,6 @@ $states ['CO' ] = array (
 	'ARU' => 'Arauca',
 	'ATL' => 'Atlántico',
 	'BOL' => 'Bolívar',
-	'BOG' => 'Bogotá D.C',
 	'BOY' => 'Boyacá',
 	'CAL' => 'Caldas',
 	'CAQ' => 'Caquetá',
