@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Departamentos y Ciudades de Colombia para Woocommerce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-19 19:08+0000\n"
+"POT-Creation-Date: 2018-09-12 00:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,10 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: includes/filter-by-cities.php:25
-msgid "Shipping filter By Cities"
-msgstr ""
-
 #: includes/filter-by-cities.php:26
 msgid "Allows adding rules by city"
 msgstr ""
@@ -26,27 +22,12 @@ msgstr ""
 msgid "Coste"
 msgstr ""
 
-#: includes/settings-filter-by-cities.php:40
-msgid "Cities"
-msgstr ""
-
-#: includes/settings-filter-by-cities.php:43
-msgid "Select the city referring to the region that you have previously added"
-msgstr ""
-
-#: includes/admin/html/html-shipping-methods.php:10
-msgid "Configured Shipping filter By Cities  Methods in all shipping zones"
-msgstr ""
-
-#: includes/admin/html/html-shipping-methods.php:13
-#, php-format
-msgid ""
-"This table shows <a href=\"%s\">all shipping zones</a> and for each zone the "
-"shipping methods provided by this plugin."
-msgstr ""
-
 #. Name of the plugin
 msgid "Departamentos y Ciudades de Colombia para Woocommerce"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://saulmoralespa.com"
 msgstr ""
 
 #. Description of the plugin
@@ -57,6 +38,10 @@ msgstr ""
 msgid "Saul Morales Pacheco"
 msgstr ""
 
-#. Author URI of the plugin
-msgid "https://saulmoralespa.com"
+#: includes/settings-filter-by-cities.php:43
+msgid "Select the city referring to the region that you have previously added"
+msgstr ""
+
+#: includes/filter-by-cities.php:25
+msgid "Shipping filter By Cities"
 msgstr ""

@@ -5,7 +5,7 @@ Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce 
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 4.6
 Tested up to: 4.9.8
-Stable tag: 1.1.3
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,15 +61,22 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= It includes all the cities of the 32 departments? =
+= It includes all the cities of the 32 departments?
 
 Only major cities of each department.
+
+= Something else you have not told me?
+
+* Bogotá is not included as a state, because it is not discarded
+* In the shipping area so you can impose rules you must first add the department in the field of states
 
 == Screenshots ==
 1. States dropdown.
 2. States dropdown on search.
 3. Cities dropdown on search
 4. Choose department WooCommerce.
+5. Shipping rule by city
+6. Reflection shipping rule by city
 
 == Changelog ==
 = 1.0 =
@@ -78,6 +85,12 @@ Only major cities of each department.
 * Added Bogotá D.C as state and localities.
 = 1.1.2 =
 * Eliminated localities of Bogotá D.C.
+= 1.1.3 =
+* Added method shipping filter for city
+= 1.1.4 =
+* added languages Spanish Colombia and fixed state
+= 1.1.5 =
+* finished translation
 
 == Upgrade Notice ==
 = 1.1 =
@@ -88,4 +101,5 @@ Only major cities of each department.
 * Added method shipping filter for city
 = 1.1.4 =
 * added languages Spanish Colombia and fixed state
-
+= 1.1.5 =
+* finished translation

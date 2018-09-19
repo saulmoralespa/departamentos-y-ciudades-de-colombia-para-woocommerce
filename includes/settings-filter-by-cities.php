@@ -37,7 +37,7 @@ return array(
         'desc_tip'		=> true
     ),
     'cities' => array(
-        'title' => __('Cities','shipping-filter-by-cities'),
+        'title' => __('Cities','departamentos-y-ciudades-de-colombia-para-woocommerce'),
         'type' => 'multiselect',
         'class'       => 'wc-enhanced-select',
         'description' => __( 'Select the city referring to the region that you have previously added', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),

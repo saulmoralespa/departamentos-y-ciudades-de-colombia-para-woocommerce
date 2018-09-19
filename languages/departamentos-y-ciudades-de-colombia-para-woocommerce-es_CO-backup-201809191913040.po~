@@ -1,14 +1,13 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Departamentos y Ciudades de Colombia para Woocommerce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-19 19:08+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2018-09-19 19:10+0000\n"
+"Last-Translator: wpdev <cortuclas@gmail.com>\n"
+"Language-Team: Español de Colombia\n"
+"Language: es_CO\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,15 +15,15 @@ msgstr ""
 
 #: includes/filter-by-cities.php:25
 msgid "Shipping filter By Cities"
-msgstr ""
+msgstr "Filtro de envío por ciudades"
 
 #: includes/filter-by-cities.php:26
 msgid "Allows adding rules by city"
-msgstr ""
+msgstr "Permite agregar reglas por ciudad"
 
 #: includes/settings-filter-by-cities.php:33
 msgid "Coste"
-msgstr ""
+msgstr "Costo"
 
 #: includes/settings-filter-by-cities.php:40
 msgid "Cities"
@@ -33,6 +32,7 @@ msgstr ""
 #: includes/settings-filter-by-cities.php:43
 msgid "Select the city referring to the region that you have previously added"
 msgstr ""
+"Seleccione la ciudad que se refiere a la región que ha agregado previamente"
 
 #: includes/admin/html/html-shipping-methods.php:10
 msgid "Configured Shipping filter By Cities  Methods in all shipping zones"
@@ -47,16 +47,16 @@ msgstr ""
 
 #. Name of the plugin
 msgid "Departamentos y Ciudades de Colombia para Woocommerce"
-msgstr ""
+msgstr "Departamentos y Ciudades de Colombia para Woocommerce"
 
 #. Description of the plugin
 msgid "Plugin modificado con los departementos y ciudades de Colombia"
-msgstr ""
+msgstr "Plugin modificado con los departementos y ciudades de Colombia"
 
 #. Author of the plugin
 msgid "Saul Morales Pacheco"
-msgstr ""
+msgstr "Saul Morales Pacheco"
 
 #. Author URI of the plugin
 msgid "https://saulmoralespa.com"
-msgstr ""
+msgstr "https://saulmoralespa.com"
