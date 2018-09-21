@@ -5,7 +5,7 @@ Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce 
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 4.6
 Tested up to: 4.9.8
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,8 @@ Only major cities of each department.
 * added languages Spanish Colombia and fixed state
 = 1.1.5 =
 * finished translation
+= 1.1.6 =
+* fixed shipping method, disable others method when is it used
 
 == Upgrade Notice ==
 = 1.1 =

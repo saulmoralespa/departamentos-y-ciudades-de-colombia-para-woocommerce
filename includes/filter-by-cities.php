@@ -93,7 +93,7 @@ function filters_by_cities_method() {
              * @param mixed $package
              * @return void
              */
-            public function calculate_shipping( $package )
+            public function calculate_shipping( $package = array() )
             {
                 $rate = array(
                     'id' => $this->id,
@@ -108,9 +108,23 @@ function filters_by_cities_method() {
                     $rate['cost'] += $this->cost;
                     $this->add_rate( $rate );
                 }
+            }
 
-                /*$print = print_r($city_destination, true);
-                $this->logger->add('filter-by-cities', $print);*/
+            /**
+             * See if the method is available.
+             *
+             * @param array $package Package information.
+             * @return bool
+             */
+            public function is_available( $package )
+            {
+                $city_destination = $package['destination']['city'];
+
+                if (!in_array($city_destination, $this->cities))
+                    return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', false, $package, $this );
+
+                add_filter( 'woocommerce_package_rates', array($this, 'unset_filters_by_cities_shipping_method_zones') , 10, 2 );
+                return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
             }
 
             public function showCitiesRegions()
@@ -126,12 +140,31 @@ function filters_by_cities_method() {
                 $cities = array();
 
                 foreach ($zones as $zone){
-                    $place = explode(':', $zone->code );
-                    $states = WC_States_Places_Colombia::get_places( $place[0] );
-                    $cities =  array_merge($cities,$this->orderArray($states[$place[1]]));
+                    if (strpos($zone->code, ':') !== false){
+                        $place = explode(':', $zone->code );
+                        $states = WC_States_Places_Colombia::get_places( $place[0] );
+                        $cities =  array_merge($cities,$this->orderArray($states[$place[1]]));
+                    }
                 }
 
                 return $cities;
+            }
+
+            public function unset_filters_by_cities_shipping_method_zones($rates, $package)
+            {
+                $all_free_rates = array();
+                foreach ( $rates as $rate_id => $rate ) {
+                    if ( $this->id === $rate->method_id ) {
+                        $all_free_rates[ $rate_id ] = $rate;
+                        break;
+                    }
+                }
+
+                if ( empty( $all_free_rates )) {
+                    return $rates;
+                } else {
+                    return $all_free_rates;
+                }
             }
 
 
