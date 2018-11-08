@@ -7,7 +7,7 @@
   }
 
   function getEnhancedSelectFormatString() {
-    var formatString = {
+      return  {
       formatMatches: function( matches ) {
         if ( 1 === matches ) {
           return wc_country_select_params.i18n_matches_1;
@@ -53,8 +53,6 @@
         return wc_country_select_params.i18n_searching;
       }
     };
-
-    return formatString;
   }
 
   // Select2 Enhancement if it exists
@@ -65,7 +63,6 @@
           placeholderOption: 'first',
           width: '100%'
         }, getEnhancedSelectFormatString() );
-
         $( this ).select2( select2_args );
       });
     };
@@ -80,14 +77,15 @@
   /* City select boxes */
   var cities_json = wc_city_select_params.cities.replace( /&quot;/g, '"' );
   var cities = $.parseJSON( cities_json );
+  var elBodyDPWoo = $( 'body' );
 
-  $( 'body' ).on( 'country_to_state_changing', function(e, country, $container) {
+    elBodyDPWoo.on( 'country_to_state_changing', function(e, country, $container) {
     var $statebox = $container.find( '#billing_state, #shipping_state, #calc_shipping_state' );
     var state = $statebox.val();
     $( document.body ).trigger( 'state_changing', [country, state, $container ] );
   });
 
-  $( 'body' ).on( 'change', 'select.state_select, #calc_shipping_state', function() {
+    elBodyDPWoo.on( 'change', 'select.state_select, #calc_shipping_state', function() {
     var $container = $( this ).closest( 'div' );
     var country = $container.find( '#billing_country, #shipping_country, #calc_shipping_country' ).val();
     var state = $( this ).val();
@@ -95,7 +93,7 @@
     $( document.body ).trigger( 'state_changing', [country, state, $container ] );
   });
 
-  $( 'body' ).on( 'state_changing', function(e, country, state, $container) {
+    elBodyDPWoo.on( 'state_changing', function(e, country, state, $container) {
     var $citybox = $container.find( '#billing_city, #shipping_city, #calc_shipping_city' );
 
     if ( cities[ country ] ) {

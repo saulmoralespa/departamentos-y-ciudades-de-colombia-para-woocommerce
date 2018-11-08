@@ -5,8 +5,8 @@ Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce 
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 4.6
 Tested up to: 4.9.8
-Stable tag: 1.1.7
-License: GPLv2 or later
+Stable tag: 1.1.8
+License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Wordpress plugin that shows dropdowns for State and City Select for woocomerce

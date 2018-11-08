@@ -160,11 +160,13 @@ function filters_by_cities_method() {
             {
                 $city_destination = $package['destination']['city'];
 
-                if (!in_array($city_destination, $this->cities))
-                    return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', false, $package, $this );
+                if (!empty($this->cities)){
+                    if (!in_array($city_destination, $this->cities))
+                        return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', false, $package, $this );
 
-                add_filter( 'woocommerce_package_rates', array($this, 'unset_filters_by_cities_shipping_method_zones') , 10, 2 );
-                return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
+                    add_filter( 'woocommerce_package_rates', array($this, 'unset_filters_by_cities_shipping_method_zones') , 10, 2 );
+                    return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
+                }
             }
 
             public function showCitiesRegions()
@@ -270,7 +272,7 @@ function filters_by_cities_method() {
                         $sum
                     )
                 );
-                remove_shortcode( 'fee', array( $this, 'fee' ) );
+                remove_shortcode( 'fee' );
                 // Remove whitespace from string.
                 $sum = preg_replace( '/\s+/', '', $sum );
                 // Remove locale from string.
