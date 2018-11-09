@@ -95,6 +95,8 @@ Only major cities of each department.
 * fixed shipping method, disable others method when is it used
 = 1.1.7 =
 * added cost of shipping class
+= 1.1.8 =
+* fixed determine city for apply  fee
 
 == Upgrade Notice ==
 = 1.1 =
@@ -105,9 +107,5 @@ Only major cities of each department.
 * Added method shipping filter for city
 = 1.1.4 =
 * added languages Spanish Colombia and fixed state
-= 1.1.5 =
-* finished translation
-= 1.1.6 =
-* fixed shipping method, disable others method when is it used
 = 1.1.7 =
 * added cost of shipping class
