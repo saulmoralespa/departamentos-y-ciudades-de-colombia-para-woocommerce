@@ -5,7 +5,7 @@ Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce 
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 4.6
 Tested up to: 4.9.8
-Stable tag: 1.1.8
+Stable tag: 1.1.10
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -70,6 +70,10 @@ Only major cities of each department.
 * Bogotá is not included as a state, because it is not discarded
 * In the shipping area so you can impose rules you must first add the department in the field of states
 
+= They are not loading the states or departments at the checkout to what is due?
+
+[Please view topic](https://wordpress.org/support/topic/conflicto-con-checkout-field-editor-for-woocommerce)
+
 == Screenshots ==
 1. States dropdown.
 2. States dropdown on search.
@@ -97,6 +101,10 @@ Only major cities of each department.
 * added cost of shipping class
 = 1.1.8 =
 * fixed determine city for apply  fee
+= 1.1.9 =
+* update readme 'conflict with Checkout Field Editor for WooCommerce'
+= 1.1.10 =
+* fixed notification
 
 == Upgrade Notice ==
 = 1.1 =

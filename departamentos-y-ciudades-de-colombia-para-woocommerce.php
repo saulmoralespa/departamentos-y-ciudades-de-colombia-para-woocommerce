@@ -2,22 +2,35 @@
 /**
  * Plugin Name: Departamentos y Ciudades de Colombia para Woocommerce
  * Description: Plugin modificado con los departementos y ciudades de Colombia
- * Version: 1.1.8
+ * Version: 1.1.10
  * Author: Saul Morales Pacheco
  * Author URI: https://saulmoralespa.com
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: departamentos-y-ciudades-de-colombia-para-woocommerce
  * Domain Path: /languages
+ * WC tested up to: 3.5
+ * WC requires at least: 2.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-add_action('plugins_loaded','states_places_Colombia_init',0);
+add_action('plugins_loaded','states_places_colombia_init',0);
 
-function states_places_Colombia_init(){
+
+add_action('notices_states_places_colombia_smp', 'states_places_colombia_smp_notices', 10, 2);
+
+function states_places_colombia_smp_notices($classes, $notice){
+    ?>
+    <div class="<?php echo $classes; ?>">
+        <p><?php echo $notice; ?></p>
+    </div>
+    <?php
+}
+
+function states_places_colombia_init(){
     load_plugin_textdomain('departamentos-y-ciudades-de-colombia-para-woocommerce',
         FALSE, dirname(plugin_basename(__FILE__)) . '/languages');
 
@@ -43,5 +56,12 @@ function states_places_Colombia_init(){
         }
 
         add_action( 'woocommerce_shipping_init', 'filters_by_cities_method' );
+
+        $subs = __( '<strong>Te gustaria conectar tu tienda con las principales transportadoras del país ?. Sé uno de los primeros</strong> ', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ) . sprintf(__('%s', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ), '<a target="_blank" class="button button-primary" href="https://saulmoralespa.com/shipping-colombia.php">' . __('Suscribete Gratis', 'departamentos-y-ciudades-de-colombia-para-woocommerce') . '</a>' );
+
+        if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
+            do_action('notices_states_places_colombia_smp', 'notice notice-info is-dismissible"', $subs);
+        }
+
     }
 }
