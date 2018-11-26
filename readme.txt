@@ -5,7 +5,7 @@ Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce 
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 4.6
 Tested up to: 4.9.8
-Stable tag: 1.1.10
+Stable tag: 1.1.11
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -105,6 +105,8 @@ Only major cities of each department.
 * update readme 'conflict with Checkout Field Editor for WooCommerce'
 = 1.1.10 =
 * fixed notification
+= 1.1.11 =
+* fixed header encode
 
 == Upgrade Notice ==
 = 1.1 =
