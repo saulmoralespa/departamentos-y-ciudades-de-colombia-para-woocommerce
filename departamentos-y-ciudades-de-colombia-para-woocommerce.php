@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Departamentos y Ciudades de Colombia para Woocommerce
  * Description: Plugin modificado con los departementos y ciudades de Colombia
- * Version: 1.1.11
+ * Version: 1.1.12
  * Author: Saul Morales Pacheco
  * Author URI: https://saulmoralespa.com
  * License: GNU General Public License v3.0
@@ -57,9 +57,11 @@ function states_places_colombia_init(){
 
         add_action( 'woocommerce_shipping_init', 'filters_by_cities_method' );
 
+        global $pagenow;
+
         $subs = __( '<strong>Te gustaria conectar tu tienda con las principales transportadoras del país ?. Sé uno de los primeros</strong> ', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ) . sprintf(__('%s', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ), '<a target="_blank" class="button button-primary" href="https://saulmoralespa.com/shipping-colombia.php">' . __('Suscribete Gratis', 'departamentos-y-ciudades-de-colombia-para-woocommerce') . '</a>' );
 
-        if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
+        if ( is_admin() && 'plugins.php' == $pagenow  && ! defined( 'DOING_AJAX' ) ) {
             do_action('notices_states_places_colombia_smp', 'notice notice-info is-dismissible', $subs);
         }
 
