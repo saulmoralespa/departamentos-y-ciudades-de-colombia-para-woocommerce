@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Departamentos y Ciudades de Colombia para Woocommerce
  * Description: Plugin modificado con los departementos y ciudades de Colombia
- * Version: 1.1.12
+ * Version: 1.1.13
  * Author: Saul Morales Pacheco
  * Author URI: https://saulmoralespa.com
  * License: GNU General Public License v3.0
@@ -18,9 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_action('plugins_loaded','states_places_colombia_init',0);
-
-
-add_action('notices_states_places_colombia_smp', 'states_places_colombia_smp_notices', 10, 2);
 
 function states_places_colombia_smp_notices($classes, $notice){
     ?>
@@ -59,11 +56,46 @@ function states_places_colombia_init(){
 
         global $pagenow;
 
-        $subs = __( '<strong>Te gustaria conectar tu tienda con las principales transportadoras del país ?. Sé uno de los primeros</strong> ', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ) . sprintf(__('%s', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ), '<a target="_blank" class="button button-primary" href="https://saulmoralespa.com/shipping-colombia.php">' . __('Suscribete Gratis', 'departamentos-y-ciudades-de-colombia-para-woocommerce') . '</a>' );
+        $subs = __( '<strong>Te gustaria conectar tu tienda con las principales transportadoras del país ?.
+        Sé uno de los primeros</strong> ', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ) .
+            sprintf(__('%s', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),
+                '<a target="_blank" class="button button-primary" href="https://saulmoralespa.com/shipping-colombia.php">' .
+                __('Suscribete Gratis', 'departamentos-y-ciudades-de-colombia-para-woocommerce') . '</a>' );
 
-        if ( is_admin() && 'plugins.php' == $pagenow  && ! defined( 'DOING_AJAX' ) ) {
-            do_action('notices_states_places_colombia_smp', 'notice notice-info is-dismissible', $subs);
+        if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
+            add_action('admin_notices', function() use($subs) {
+                states_places_colombia_smp_notices('notice notice-info is-dismissible', $subs);
+            });
+        }
+
+        $fields_billing = get_fields('billing');
+
+        $priority_field_notice = __( '<strong>La experiencia de compra puede verse afectada, 
+            encarecidamente se recomienda cambiar el orden de los campos en el checkout. 
+            El departamento debe estar antes que ciudad</strong> ', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ) .
+            sprintf(__('%s', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),
+                '<a target="_blank" class="button button-secondary" href="https://es.wordpress.org/plugins/woo-checkout-field-editor-pro/">' .
+                __('Corregir campos', 'departamentos-y-ciudades-de-colombia-para-woocommerce') . '</a>' );
+
+        if ( is_admin() &&  ! defined( 'DOING_AJAX' ) ) {
+            if ($fields_billing['billing_city']['priority'] < $fields_billing['billing_state']['priority']){
+                add_action('admin_notices', function() use($priority_field_notice) {
+                    states_places_colombia_smp_notices('notice notice-warning is-dismissible', $priority_field_notice);
+                });
+            }
         }
 
     }
+}
+
+function get_fields($key){
+    $fields = array_filter(get_option('wc_fields_'. $key, array()));
+
+    if(empty($fields) || sizeof($fields) == 0){
+        if($key === 'billing' || $key === 'shipping'){
+            $fields = WC()->countries->get_address_fields(WC()->countries->get_base_country(), $key . '_');
+
+        }
+    }
+    return $fields;
 }
