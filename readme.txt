@@ -113,6 +113,8 @@ Only major cities of each department.
 * add notification help for edit fields
 = 1.1.14 =
 * change priority of state and city
+= 1.1.15 =
+* sort alphabetically cities
 
 == Upgrade Notice ==
 = 1.1 =
