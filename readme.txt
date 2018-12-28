@@ -1,11 +1,11 @@
 === Departamentos y Ciudades de Colombia para Woocommerce ===
-Contributors: juanchopaul23,
+Contributors: saulmorales,juanchopaul23
 Donate link: http://saulmoralespa.com
 Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce departamentos de Colombia, woocommerce ciudades de Colombia,desplegable,departamentos desplegables,ciudades desplegables,city dropdown, state dropdown,city select,cities select,
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 4.6
 Tested up to: 5.0
-Stable tag: 1.1.17
+Stable tag: 1.1.18
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -119,6 +119,8 @@ Only major cities of each department.
 * compatibility with version 5.0  of wordpress
 = 1.1.17 =
 * added new cities
+= 1.1.18 =
+* fixed delete other methods shipping
 
 == Upgrade Notice ==
 = 1.1 =

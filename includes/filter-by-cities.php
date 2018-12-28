@@ -20,6 +20,9 @@ function filters_by_cities_method() {
              */
             public function __construct($instance_id = 0)
             {
+
+                parent::__construct($instance_id);
+
                 $this->id                 = 'filters_by_cities_shipping_method';
                 $this->instance_id				= absint( $instance_id );
                 $this->method_title       = __( 'Shipping filter By Cities', 'departamentos-y-ciudades-de-colombia-para-woocommerce' );
@@ -163,8 +166,6 @@ function filters_by_cities_method() {
                 if (!empty($this->cities)){
                     if (!in_array($city_destination, $this->cities))
                         return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', false, $package, $this );
-
-                    add_filter( 'woocommerce_package_rates', array($this, 'unset_filters_by_cities_shipping_method_zones') , 10, 2 );
                     return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
                 }
             }
@@ -190,23 +191,6 @@ function filters_by_cities_method() {
                 }
 
                 return $cities;
-            }
-
-            public function unset_filters_by_cities_shipping_method_zones($rates, $package)
-            {
-                $all_free_rates = array();
-                foreach ( $rates as $rate_id => $rate ) {
-                    if ( $this->id === $rate->method_id ) {
-                        $all_free_rates[ $rate_id ] = $rate;
-                        break;
-                    }
-                }
-
-                if ( empty( $all_free_rates )) {
-                    return $rates;
-                } else {
-                    return $all_free_rates;
-                }
             }
 
 
