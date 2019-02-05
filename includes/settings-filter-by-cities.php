@@ -12,6 +12,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 $cost_desc = __( 'Enter a cost (excl. tax) or sum, e.g. <code>10.00 * [qty]</code>.', 'woocommerce' ) . '<br/>' . __( 'Supports the following placeholders: <code>[qty]</code> = number of items, <code>[cost]</code> = cost of items, <code>[fee percent="10" min_fee="20"]</code> = Percentage based fee.', 'woocommerce' );
 
 $settings =  array(
+    'single_method' => array(
+        'title' 		=> __( 'Single method', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),
+        'type' 			=> 'select',
+        'description' 	=> __( 'When doing single shipping method, it eliminates all others and imposes its own rules', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),
+        'class'         => 'wc-enhanced-select',
+        'default' 		=> 'yes',
+        'desc_tip'		=> true,
+        'options'		=> array(
+            'yes' 	=> __( 'Yes', 'woocommerce' ),
+            'no' 		=> __( 'No', 'woocommerce' )
+        )
+    ),
+
     'title' => array(
         'title' 		=> __( 'Method title', 'woocommerce' ),
         'type' 			=> 'text',

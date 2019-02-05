@@ -20,6 +20,9 @@ function filters_by_cities_method() {
              */
             public function __construct($instance_id = 0)
             {
+
+                parent::__construct($instance_id);
+
                 $this->id                 = 'filters_by_cities_shipping_method';
                 $this->instance_id				= absint( $instance_id );
                 $this->method_title       = __( 'Shipping filter By Cities', 'departamentos-y-ciudades-de-colombia-para-woocommerce' );
@@ -44,6 +47,7 @@ function filters_by_cities_method() {
                 // Load the settings API
                 $this->instance_form_fields = $this->define_instance_form_fields();
                 $this->form_fields = $this->define_global_form_fields();
+                $this->single_method = $this->get_option('single_method');
                 $this->title = $this->get_option('title');
                 $this->tax_status = $this->get_option( 'tax_status' );
                 $this->cost = $this->get_option( 'cost' );
@@ -164,9 +168,11 @@ function filters_by_cities_method() {
                     if (!in_array($city_destination, $this->cities))
                         return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', false, $package, $this );
 
+                    if ($this->single_method === 'yes')
                     add_filter( 'woocommerce_package_rates', array($this, 'unset_filters_by_cities_shipping_method_zones') , 10, 2 );
-                    return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
+
                 }
+                return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
             }
 
             public function showCitiesRegions()

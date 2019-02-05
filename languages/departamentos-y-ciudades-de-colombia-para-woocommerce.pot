@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Departamentos y Ciudades de Colombia para Woocommerce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-19 19:08+0000\n"
+"POT-Creation-Date: 2019-02-02 14:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,23 +14,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: includes/filter-by-cities.php:25
+#: departamentos-y-ciudades-de-colombia-para-woocommerce.php:57
+msgid ""
+"<strong>Te gustaria conectar tu tienda con las principales transportadoras "
+"del país ?.\n"
+"        Sé uno de los primeros</strong> "
+msgstr ""
+
+#: departamentos-y-ciudades-de-colombia-para-woocommerce.php:59
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: departamentos-y-ciudades-de-colombia-para-woocommerce.php:61
+msgid "Suscribete Gratis"
+msgstr ""
+
+#: includes/filter-by-cities.php:28
 msgid "Shipping filter By Cities"
 msgstr ""
 
-#: includes/filter-by-cities.php:26
+#: includes/filter-by-cities.php:29
 msgid "Allows adding rules by city"
 msgstr ""
 
-#: includes/settings-filter-by-cities.php:33
+#: includes/settings-filter-by-cities.php:16
+msgid "Single method"
+msgstr ""
+
+#: includes/settings-filter-by-cities.php:18
+msgid ""
+"When doing single shipping method, it eliminates all others and imposes its "
+"own rules"
+msgstr ""
+
+#: includes/settings-filter-by-cities.php:46
 msgid "Coste"
 msgstr ""
 
-#: includes/settings-filter-by-cities.php:40
+#: includes/settings-filter-by-cities.php:53
 msgid "Cities"
 msgstr ""
 
-#: includes/settings-filter-by-cities.php:43
+#: includes/settings-filter-by-cities.php:56
 msgid "Select the city referring to the region that you have previously added"
 msgstr ""
 
