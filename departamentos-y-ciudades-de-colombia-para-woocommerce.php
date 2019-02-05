@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-add_action('plugins_loaded','states_places_colombia_init',0);
+add_action('plugins_loaded','states_places_colombia_init',1);
 
 function states_places_colombia_smp_notices($classes, $notice){
     ?>
