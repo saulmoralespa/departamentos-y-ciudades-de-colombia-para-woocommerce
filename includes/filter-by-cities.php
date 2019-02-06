@@ -167,14 +167,8 @@ function filters_by_cities_method() {
                 if (!empty($this->cities)){
                     if (!in_array($city_destination, $this->cities))
                         return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', false, $package, $this );
-<<<<<<< HEAD
-
                     if ($this->single_method === 'yes')
                     add_filter( 'woocommerce_package_rates', array($this, 'unset_filters_by_cities_shipping_method_zones') , 10, 2 );
-
-=======
-                    return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
->>>>>>> 308978a5fa306d9ef97156015fc6078ec95acd72
                 }
                 return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
             }
@@ -200,6 +194,23 @@ function filters_by_cities_method() {
                 }
 
                 return $cities;
+            }
+
+            public function unset_filters_by_cities_shipping_method_zones($rates, $package)
+            {
+                $all_free_rates = array();
+                foreach ( $rates as $rate_id => $rate ) {
+                    if ( $this->id === $rate->method_id ) {
+                        $all_free_rates[ $rate_id ] = $rate;
+                        break;
+                    }
+                }
+
+                if ( empty( $all_free_rates )) {
+                    return $rates;
+                } else {
+                    return $all_free_rates;
+                }
             }
 
 
