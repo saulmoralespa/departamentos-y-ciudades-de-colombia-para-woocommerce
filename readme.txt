@@ -4,8 +4,8 @@ Donate link: http://saulmoralespa.com
 Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce departamentos de Colombia, woocommerce ciudades de Colombia, desplegable, departamentos desplegables, ciudades desplegables, city dropdown, state dropdown, city select, cities select,
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 4.6
-Tested up to: 5.0
-Stable tag: 1.1.19
+Tested up to: 5.1
+Stable tag: 1.1.20
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -139,3 +139,5 @@ Only major cities of each department.
 * fixed delete other methods shipping
 = 1.1.19 =
 * added optional single method
+= 1.1.20 =
+* added order of fields state and city

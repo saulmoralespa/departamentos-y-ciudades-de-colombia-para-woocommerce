@@ -3,7 +3,7 @@
 class WC_States_Places_Colombia
 {
 
-const VERSION = '1.1.18';
+const VERSION = '1.1.20';
 private static $places;
 
 /**
@@ -138,7 +138,7 @@ $args['class'][] = 'validate-' . $validate;
 }
 
 // field p and label
-$field  = '<p class="form-row ' . esc_attr( implode( ' ', $args['class'] ) ) .'" id="' . esc_attr( $args['id'] ) . '_field">';
+$field  = '<p class="form-row ' . esc_attr( implode( ' ', $args['class'] ) ) .'" data-priority="'.esc_attr__($args['priority']).'"  id="' . esc_attr( $args['id'] ) . '_field">';
     if ( $args['label'] ) {
     $field .= '<label for="' . esc_attr( $args['id'] ) . '" class="' . esc_attr( implode( ' ', $args['label_class'] ) ) .'">' . $args['label']. $required . '</label>';
     }
