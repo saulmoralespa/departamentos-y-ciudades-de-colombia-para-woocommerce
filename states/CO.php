@@ -41,5 +41,5 @@ $states ['CO' ] = array (
 	'TOL' => 'Tolima',
 	'VAC' => 'Valle del Cauca',
 	'VAU' => 'Vaupés',
-	'VIC' => 'Vichada',
+	'VIC' => 'Vichada'
 	);

@@ -4,7 +4,7 @@
  * Colombia places
  *
  * @author   Saul Morales Pacheco <moralespachecopablo@gmail.com>
- * @version  1.1.17
+ * @version  1.1.24
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
 global $places;
@@ -1022,7 +1022,7 @@ $places['CO'] = array(
         "Chinacota",
         "Chitaga",
         "Convencion",
-        "Cucuta",
+        "Cúcuta",
         "Cucutilla",
         "Durania",
         "El carmen",
