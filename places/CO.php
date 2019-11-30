@@ -4,7 +4,7 @@
  * Colombia places
  *
  * @author   Saul Morales Pacheco <moralespachecopablo@gmail.com>
- * @version  1.1.24
+ * @version  1.1.25
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
 global $places;
@@ -14,6 +14,8 @@ $places['CO'] = array(
         "El encanto",
         "La Chorrera",
         "La Pedrera",
+        "La Victoria",
+        "Miriti Paraná",
         "Leticia",
         "Puerto Alegría",
         "Puerto Arica",
@@ -45,7 +47,7 @@ $places['CO'] = array(
         "Bolombolo",
         "Briceño",
         "Buritica",
-        "Caceres",
+        "Cáceres",
         "Caicedo",
         "Caldas",
         "Campamento",
@@ -66,7 +68,7 @@ $places['CO'] = array(
         "Dabeiba",
         "Donmatias",
         "Doradal",
-        "Ebejico",
+        "Ebéjico",
         "El bagre",
         "El carmen de viboral",
         "El doce",
@@ -551,7 +553,7 @@ $places['CO'] = array(
         "Caracolicito",
         "Chimichagua",
         "Chiriguana",
-        "Codazzi- agustin",
+        "Codazzi",
         "Curumani",
         "El copey",
         "El paso",
@@ -651,12 +653,12 @@ $places['CO'] = array(
         "Apulo",
         "Arbelaez",
         "Bituima",
-        "Bogota",
+        "Bogotá D.C",
         "Bojaca",
         "Briceño",
         "Cabrera",
         "Cachipay",
-        "Cajica",
+        "Cajicá",
         "Cambao",
         "Caparrapi",
         "Capellania",
@@ -679,7 +681,7 @@ $places['CO'] = array(
         "El rosal",
         "El sisga",
         "El triunfo",
-        "Facatativa",
+        "Facatativá",
         "Fomeque",
         "Fosca",
         "Funza",
@@ -1354,6 +1356,7 @@ $places['CO'] = array(
         "Mitu",
         "Papanaua",
         "Taraira",
+        "Tío barbas",
         "Yavaraté"
 	    ),
 	'VIC' => array(
