@@ -5,7 +5,7 @@ Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce 
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 4.6
 Tested up to: 5.3
-Stable tag: 1.1.25
+Stable tag: 1.1.26
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -151,3 +151,5 @@ Only major cities of each department.
 * update noticies
 = 1.1.25 =
 * update city Codazzi, Cesar
+= 1.1.26 =
+* fixed class cost

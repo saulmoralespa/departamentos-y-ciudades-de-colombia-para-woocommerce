@@ -4,7 +4,7 @@
  * Colombia places
  *
  * @author   Saul Morales Pacheco <moralespachecopablo@gmail.com>
- * @version  1.1.25
+ * @version  1.1.26
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
 global $places;

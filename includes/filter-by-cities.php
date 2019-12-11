@@ -139,10 +139,13 @@ function filters_by_cities_method() {
                             )
                         );
                         if ( 'class' === $this->type ) {
-                            $rate['cost'] += $class_cost;
+                            $rate['cost'] += $class_cost * array_sum( wp_list_pluck( $products, 'quantity' ) );
                         } else {
                             $highest_class_cost = $class_cost > $highest_class_cost ? $class_cost : $highest_class_cost;
                         }
+
+                        $logger = new WC_Logger();
+                        $logger->add('departamento-ciudades', print_r($class_cost, true));
                     }
                     if ( 'order' === $this->type && $highest_class_cost ) {
                         $rate['cost'] += $highest_class_cost;
