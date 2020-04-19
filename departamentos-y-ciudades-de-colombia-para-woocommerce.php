@@ -2,15 +2,15 @@
 /**
  * Plugin Name: Departamentos y Ciudades de Colombia para Woocommerce
  * Description: Plugin modificado con los departementos y ciudades de Colombia
- * Version: 1.1.26
+ * Version: 1.1.27
  * Author: Saul Morales Pacheco
  * Author URI: https://saulmoralespa.com
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: departamentos-y-ciudades-de-colombia-para-woocommerce
  * Domain Path: /languages
- * WC tested up to: 3.6
- * WC requires at least: 2.6
+ * WC tested up to: 4.0
+ * WC requires at least: 3.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
