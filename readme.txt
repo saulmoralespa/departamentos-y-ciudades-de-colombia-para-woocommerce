@@ -4,8 +4,8 @@ Donate link: https://secure.payco.co/checkoutopen/10775
 Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce departamentos de Colombia, woocommerce ciudades de Colombia, desplegable, departamentos desplegables, ciudades desplegables, city dropdown, state dropdown, city select, cities select,
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 5.4
-Tested up to: 5.4
-Stable tag: 1.1.29
+Tested up to: 5.5
+Stable tag: 1.1.30
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -159,3 +159,5 @@ Only major cities of each department.
 *  Updated priority states and places
 = 1.1.29 =
 *  compatibility with version 5.5  of wordpress
+= 1.1.30 =
+*  Added cities in Antioquia y Casanare
