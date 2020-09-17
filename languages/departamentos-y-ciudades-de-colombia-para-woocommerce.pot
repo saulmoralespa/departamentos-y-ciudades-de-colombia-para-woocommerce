@@ -1,0 +1,88 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Departamentos y Ciudades de Colombia para Woocommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-02 14:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: departamentos-y-ciudades-de-colombia-para-woocommerce.php:57
+msgid ""
+"<strong>Te gustaria conectar tu tienda con las principales transportadoras "
+"del país ?.\n"
+"        Sé uno de los primeros</strong> "
+msgstr ""
+
+#: departamentos-y-ciudades-de-colombia-para-woocommerce.php:59
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: departamentos-y-ciudades-de-colombia-para-woocommerce.php:61
+msgid "Suscribete Gratis"
+msgstr ""
+
+#: includes/filter-by-cities.php:28
+msgid "Shipping filter By Cities"
+msgstr ""
+
+#: includes/filter-by-cities.php:29
+msgid "Allows adding rules by city"
+msgstr ""
+
+#: includes/settings-filter-by-cities.php:16
+msgid "Single method"
+msgstr ""
+
+#: includes/settings-filter-by-cities.php:18
+msgid ""
+"When doing single shipping method, it eliminates all others and imposes its "
+"own rules"
+msgstr ""
+
+#: includes/settings-filter-by-cities.php:46
+msgid "Coste"
+msgstr ""
+
+#: includes/settings-filter-by-cities.php:53
+msgid "Cities"
+msgstr ""
+
+#: includes/settings-filter-by-cities.php:56
+msgid "Select the city referring to the region that you have previously added"
+msgstr ""
+
+#: includes/admin/html/html-shipping-methods.php:10
+msgid "Configured Shipping filter By Cities  Methods in all shipping zones"
+msgstr ""
+
+#: includes/admin/html/html-shipping-methods.php:13
+#, php-format
+msgid ""
+"This table shows <a href=\"%s\">all shipping zones</a> and for each zone the "
+"shipping methods provided by this plugin."
+msgstr ""
+
+#. Name of the plugin
+msgid "Departamentos y Ciudades de Colombia para Woocommerce"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin modificado con los departementos y ciudades de Colombia"
+msgstr ""
+
+#. Author of the plugin
+msgid "Saul Morales Pacheco"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://saulmoralespa.com"
+msgstr ""
