@@ -31,7 +31,7 @@ MySQL version 5.0 or greater
 
 = Automatic installation =
 
-- Automatic installation is the easiest option as WordPress handles the file transfers itself and you donâ€™t need to leave your web browser. To do an automatic install of WooCommerce, log in to your WordPress dashboard, navigate to the Plugins menu and click `Add New`.
+- Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't need to leave your web browser. To do an automatic install of WooCommerce, log in to your WordPress dashboard, navigate to the Plugins menu and click `Add New`.
 - Search for "Departamentos y Ciudades de Colombia para Woocommerce", install and activate.
 - Available [@Github](https://github.com/saulmoralespa/departamentos-y-ciudades-de-colombia-para-woocommerce).
 
@@ -67,7 +67,7 @@ Only major cities of each department.
 
 = Something else you have not told me?
 
-* BogotÃ¡ is not included as a state, because it is not discarded
+* Bogotá is not included as a state, because it is not discarded
 * In the shipping area so you can impose rules you must first add the department in the field of states
 
 = They are not loading the states or departments at the checkout to what is due?
@@ -86,9 +86,9 @@ Only major cities of each department.
 = 1.0 =
 * 24/10/2016 First release.
 = 1.1 =
-* Added BogotÃ¡ D.C as state and localities.
+* Added Bogotá D.C as state and localities.
 = 1.1.2 =
-* Eliminated localities of BogotÃ¡ D.C.
+* Eliminated localities of Bogotá D.C.
 = 1.1.3 =
 * Added method shipping filter for city
 = 1.1.4 =
@@ -126,7 +126,7 @@ Only major cities of each department.
 = 1.1 =
 * Added Bogota D.C as state and localities.
 = 1.1.2 =
-* Eliminated localities of BogotÃ¡ D.C
+* Eliminated localities of Bogotá D.C
 = 1.1.3 =
 * Added method shipping filter for city
 = 1.1.4 =
