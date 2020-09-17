@@ -54,8 +54,8 @@ function states_places_colombia_init(){
 
         add_action( 'woocommerce_shipping_init', 'filters_by_cities_method' );
 
-        $subs = __( '<strong>Te gustaria conectar tu tienda con las principales transportadoras del país ?.
-        Sé uno de los primeros</strong> ', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ) .
+        $subs = __( '<strong>Te gustaria conectar tu tienda con las principales transportadoras del paÃ­s ?.
+        SÃ© uno de los primeros</strong> ', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ) .
             sprintf(__('%s', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),
                 '<a class="button button-primary" href="https://saulmoralespa.com/shipping-colombia.php">' .
                 __('Suscribete Gratis', 'departamentos-y-ciudades-de-colombia-para-woocommerce') . '</a>' );
