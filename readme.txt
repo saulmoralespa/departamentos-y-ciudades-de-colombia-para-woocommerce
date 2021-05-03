@@ -4,8 +4,8 @@ Donate link: https://secure.payco.co/checkoutopen/10775
 Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce departamentos de Colombia, woocommerce ciudades de Colombia, desplegable, departamentos desplegables, ciudades desplegables, city dropdown, state dropdown, city select, cities select,
 seleccionar ciudades,seleccionar departamentos
 Requires at least: 5.4
-Tested up to: 5.5
-Stable tag: 1.1.30
+Tested up to: 5.7
+Stable tag: 1.1.33
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -86,44 +86,6 @@ Only major cities of each department.
 = 1.0 =
 * 24/10/2016 First release.
 = 1.1 =
-* Added Bogotá D.C as state and localities.
-= 1.1.2 =
-* Eliminated localities of Bogotá D.C.
-= 1.1.3 =
-* Added method shipping filter for city
-= 1.1.4 =
-* added languages Spanish Colombia and fixed state
-= 1.1.5 =
-* finished translation
-= 1.1.6 =
-* fixed shipping method, disable others method when is it used
-= 1.1.7 =
-* added cost of shipping class
-= 1.1.8 =
-* fixed determine city for apply  fee
-= 1.1.9 =
-* update readme 'conflict with Checkout Field Editor for WooCommerce'
-= 1.1.10 =
-* fixed notification
-= 1.1.11 =
-* fixed header encode
-= 1.1.12 =
-* show notification in page plugins.php
-= 1.1.13 =
-* add notification help for edit fields
-= 1.1.14 =
-* change priority of state and city
-= 1.1.15 =
-* sort alphabetically cities
-= 1.1.16 =
-* compatibility with version 5.0  of wordpress
-= 1.1.17 =
-* added new cities
-= 1.1.18 =
-* fixed delete other methods shipping
-
-== Upgrade Notice ==
-= 1.1 =
 * Added Bogota D.C as state and localities.
 = 1.1.2 =
 * Eliminated localities of Bogotá D.C
@@ -160,4 +122,10 @@ Only major cities of each department.
 = 1.1.29 =
 *  compatibility with version 5.5  of wordpress
 = 1.1.30 =
-*  Added cities in Antioquia y Casanare
+*  Added cities in Antioquia and Casanare
+= 1.1.31 =
+*  Updated cities in Cauca and Valle del Cauca
+= 1.1.32 =
+* Updated readme version wordpress
+= 1.1.33 =
+* Updated readme version wordpress
