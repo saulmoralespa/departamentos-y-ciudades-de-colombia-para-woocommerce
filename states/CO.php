@@ -3,7 +3,7 @@
  * Colombia states
  *
  * @author   Saul Morales Pacheco <moralespachecopablo@gmail.com>
- * @version  1.1.33
+ * @version  2.0.0
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
 
@@ -14,6 +14,7 @@ $states ['CO' ] = array (
 	'ANT' => 'Antioquia',
 	'ARU' => 'Arauca',
 	'ATL' => 'Atlántico',
+	'BOG' => 'Bogotá',
 	'BOL' => 'Bolívar',
 	'BOY' => 'Boyacá',
 	'CAL' => 'Caldas',
@@ -21,7 +22,7 @@ $states ['CO' ] = array (
 	'CAS' => 'Casanare',
 	'CAU' => 'Cauca',
 	'CES' => 'Cesar',
-	'CHOC' => 'Chocó',
+	'CHO' => 'Chocó',
 	'COR' => 'Córdoba',
 	'CUN' => 'Cundinamarca',
 	'GUA' => 'Guainía',

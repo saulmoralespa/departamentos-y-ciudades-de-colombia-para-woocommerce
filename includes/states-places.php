@@ -3,7 +3,7 @@
 class WC_States_Places_Colombia
 {
 
-    const VERSION = '1.1.33';
+    const VERSION = '2.0.0';
     private static $places;
 
     /**

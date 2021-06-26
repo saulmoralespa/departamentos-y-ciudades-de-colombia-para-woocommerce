@@ -224,6 +224,9 @@ $places['CO'] = array(
         "Tubara",
         "Usiacuri"
 		),
+	'BOG' => array(
+	    'Bogotá'
+    ),
 	'BOL' => array(
         "Achi",
         "Arenal",
@@ -570,7 +573,7 @@ $places['CO'] = array(
         "Tamalameque",
         "Valledupar"
 		),
-	'CHOC'  => array(
+	'CHO'  => array(
         "Acandi",
         "Alto baudo",
         "Andagoya",
