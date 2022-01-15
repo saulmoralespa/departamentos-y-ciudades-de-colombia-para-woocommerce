@@ -34,7 +34,7 @@ class WC_States_Places_Colombia
      */
     public function init_states()
     {
-        add_filter('woocommerce_states', array($this, 'wc_states'));
+        add_filter('woocommerce_states', array($this, 'wc_states'), 10);
     }
 
     /**
@@ -61,7 +61,7 @@ class WC_States_Places_Colombia
 
         if (!empty( $allowed ) ) {
             foreach ($allowed as $code => $country) {
-                if (! isset( $states[$code] ) && file_exists(self::get_plugin_path() . '/states/' . $code . '.php')) {
+                if (file_exists(self::get_plugin_path() . '/states/' . $code . '.php')) {
                     include(self::get_plugin_path() . '/states/' . $code . '.php');
                 }
             }
