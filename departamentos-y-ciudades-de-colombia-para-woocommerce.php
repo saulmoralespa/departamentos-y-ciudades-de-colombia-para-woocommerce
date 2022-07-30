@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Departamentos y Ciudades de Colombia para Woocommerce
- * Description: Plugin modificado con los departementos y ciudades de Colombia
- * Version: 2.0.3
+ * Description: Plugin modificado con los departamentos y ciudades de Colombia
+ * Version: 2.0.5
  * Author: Saul Morales Pacheco
  * Author URI: https://saulmoralespa.com
  * License: GNU General Public License v3.0
@@ -31,10 +31,12 @@ function states_places_colombia_init(){
     load_plugin_textdomain('departamentos-y-ciudades-de-colombia-para-woocommerce',
         FALSE, dirname(plugin_basename(__FILE__)) . '/languages');
 
+    if ( ! function_exists( 'is_plugin_active' ) ) require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+
     /**
      * Check if WooCommerce is active
      */
-    if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+    if(is_plugin_active('woocommerce/woocommerce.php')) {
 
         require_once ('includes/states-places.php');
         /**
@@ -53,20 +55,6 @@ function states_places_colombia_init(){
         }
 
         add_action( 'woocommerce_shipping_init', 'filters_by_cities_method' );
-
-        $subs = __( '<strong>Te gustaria conectar tu tienda con las principales transportadoras del país ?.
-        Sé uno de los primeros</strong> ', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ) .
-            sprintf(__('%s', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),
-                '<a class="button button-primary" href="https://saulmoralespa.com/shipping-colombia.php">' .
-                __('Suscribete Gratis', 'departamentos-y-ciudades-de-colombia-para-woocommerce') . '</a>' );
-
-        global $pagenow;
-
-        if ( is_admin() && 'plugins.php' == $pagenow && !defined( 'DOING_AJAX' ) ) {
-            add_action('admin_notices', function() use($subs) {
-                states_places_colombia_smp_notices('notice notice-info is-dismissible', $subs);
-            });
-        }
 
     }
 }
