@@ -1144,6 +1144,7 @@ $places['CO'] = array(
         "Landazuri",
         "La paz",
         "Lebrija",
+        "Los santos",
         "Malaga",
         "Matanza",
         "Mogotes",
