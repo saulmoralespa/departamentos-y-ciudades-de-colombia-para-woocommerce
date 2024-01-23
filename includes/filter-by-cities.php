@@ -99,17 +99,18 @@ function filters_by_cities_method() {
              */
             public function calculate_shipping( $package = array() )
             {
-                $rate = array(
+                $params_rate =array(
                     'id' => $this->id,
                     'label'   => $this->title,
                     'cost'		=> 0,
                     'package' => $package,
                 );
 
-                $city_destination = $package['destination']['city'];
+                $rate = apply_filters('filters_by_cities_shipping_method_params_rate', $params_rate);
+
                 // Calculate the costs.
                 $has_costs = false; // True when a cost is set. False if all costs are blank strings.
-                $cost      = $this->get_option( 'cost' );
+                $cost = $this->get_option( 'cost' );
                 if ( '' !== $cost ) {
                     $has_costs    = true;
                     $rate['cost'] = $this->evaluate_cost(
@@ -143,9 +144,6 @@ function filters_by_cities_method() {
                         } else {
                             $highest_class_cost = $class_cost > $highest_class_cost ? $class_cost : $highest_class_cost;
                         }
-
-                        $logger = new WC_Logger();
-                        $logger->add('departamento-ciudades', print_r($class_cost, true));
                     }
                     if ( 'order' === $this->type && $highest_class_cost ) {
                         $rate['cost'] += $highest_class_cost;
@@ -176,7 +174,7 @@ function filters_by_cities_method() {
                 return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', true, $package, $this );
             }
 
-            public function showCitiesRegions()
+            public function show_cities_regions()
             {
                 if (!isset($_REQUEST['instance_id']))
                     return array();
@@ -209,11 +207,7 @@ function filters_by_cities_method() {
                     }
                 }
 
-                if ( empty( $all_free_rates )) {
-                    return $rates;
-                } else {
-                    return $all_free_rates;
-                }
+                return empty( $all_free_rates ) ? $rates : $all_free_rates;
             }
 
 

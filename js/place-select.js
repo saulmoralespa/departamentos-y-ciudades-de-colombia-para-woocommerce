@@ -56,14 +56,14 @@
   }
 
   // Select2 Enhancement if it exists
-  if ( $().select2 ) {
+  if ( $().selectWoo ) {
     var wc_city_select_select2 = function() {
       $( 'select.city_select:visible' ).each( function() {
         var select2_args = $.extend({
           placeholderOption: 'first',
           width: '100%'
         }, getEnhancedSelectFormatString() );
-        $( this ).select2( select2_args );
+        $( this ).selectWoo( select2_args );
       });
     };
 
@@ -80,21 +80,20 @@
   var elBodyDPWoo = $( 'body' );
 
     elBodyDPWoo.on( 'country_to_state_changing', function(e, country, $container) {
-    var $statebox = $container.find( '#billing_state, #shipping_state, #calc_shipping_state' );
+    var $statebox = $container.find( '#billing_state, #shipping_state, #calc_shipping_state, #vendor_state' );
     var state = $statebox.val();
     $( document.body ).trigger( 'state_changing', [country, state, $container ] );
   });
 
     elBodyDPWoo.on( 'change', 'select.state_select, #calc_shipping_state', function() {
-    var $container = $( this ).closest( 'div' );
-    var country = $container.find( '#billing_country, #shipping_country, #calc_shipping_country' ).val();
+    var $container = $( this ).closest( 'div.woocommerce-billing-fields, div.woocommerce-shipping-fields, form.woocommerce-shipping-calculator, form.mvx_shop_settings_form' );
+    var country = $container.find( '#billing_country, #shipping_country, #calc_shipping_country, #vendor_country' ).val();
     var state = $( this ).val();
-
     $( document.body ).trigger( 'state_changing', [country, state, $container ] );
   });
 
     elBodyDPWoo.on( 'state_changing', function(e, country, state, $container) {
-    var $citybox = $container.find( '#billing_city, #shipping_city, #calc_shipping_city' );
+    var $citybox = $container.find( '#billing_city, #shipping_city, #calc_shipping_city, #vendor_city' );
 
     if ( cities[ country ] ) {
       /* if the country has no states */

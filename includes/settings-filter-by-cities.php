@@ -54,7 +54,7 @@ $settings =  array(
         'type' => 'multiselect',
         'class'       => 'wc-enhanced-select',
         'description' => __( 'Select the city referring to the region that you have previously added', 'departamentos-y-ciudades-de-colombia-para-woocommerce' ),
-        'options' => $this->showCitiesRegions(),
+        'options' => $this->show_cities_regions(),
         'desc_tip'    => true,
     )
 );

@@ -3,7 +3,8 @@
 class WC_States_Places_Colombia
 {
 
-    const VERSION = '2.0.5';
+    const VERSION = '2.0.14';
+    const CODE_COUNTRY = 'CO';
     private static $places;
 
     /**
@@ -17,7 +18,7 @@ class WC_States_Places_Colombia
     public function __construct($file)
     {
         self::$file = $file;
-        add_action( 'plugins_loaded', array( $this, 'init') );
+        $this->init();
     }
 
     /**
@@ -34,7 +35,7 @@ class WC_States_Places_Colombia
      */
     public function init_states()
     {
-        add_filter('woocommerce_states', array($this, 'wc_states'), 10);
+        add_filter('woocommerce_states', array($this, 'wc_states'));
     }
 
     /**
@@ -54,17 +55,10 @@ class WC_States_Places_Colombia
      * @param mixed $states
      * @return mixed
      */
-    public function  wc_states($states)
+    public function wc_states($states)
     {
-//get countries allowed by store owner
-        $allowed = self::get_store_allowed_countries();
-
-        if (!empty( $allowed ) ) {
-            foreach ($allowed as $code => $country) {
-                if (file_exists(self::get_plugin_path() . '/states/' . $code . '.php')) {
-                    include(self::get_plugin_path() . '/states/' . $code . '.php');
-                }
-            }
+        if (file_exists(self::get_plugin_path() . '/states/' . self::CODE_COUNTRY . '.php')) {
+            include(self::get_plugin_path() . '/states/' . self::CODE_COUNTRY . '.php');
         }
 
         return $states;
@@ -217,14 +211,8 @@ class WC_States_Places_Colombia
     {
         global $places;
 
-        $allowed = self::get_store_allowed_countries();
-
-        if ( $allowed ) {
-            foreach ( $allowed as $code => $country ) {
-                if ( ! isset( $places[ $code ] ) && file_exists( self::get_plugin_path() . '/places/' . $code . '.php' ) ) {
-                    include( self::get_plugin_path() . '/places/' . $code . '.php' );
-                }
-            }
+        if ( ! isset( $places[self::CODE_COUNTRY] ) && file_exists( self::get_plugin_path() . '/places/' . self::CODE_COUNTRY . '.php' ) ) {
+            include( self::get_plugin_path() . '/places/' . self::CODE_COUNTRY . '.php' );
         }
 
         self::$places = $places;
@@ -236,10 +224,11 @@ class WC_States_Places_Colombia
      */
     public function load_scripts()
     {
-        if ( is_cart() || is_checkout() || is_wc_endpoint_url( 'edit-address' ) ) {
-
+        $is_page = is_cart() || is_checkout() || is_wc_endpoint_url( 'edit-address' );
+        $is_page = apply_filters( 'departamentos_ciudades_colombia_para_woocommerce_is_page', $is_page );
+        if ( $is_page ) {
             $city_select_path = self::get_plugin_url() . 'js/place-select.js';
-            wp_enqueue_script( 'wc-city-select', $city_select_path, array( 'jquery', 'woocommerce' ), self::VERSION, true );
+            wp_enqueue_script( 'wc-city-select', $city_select_path, array( 'jquery', 'wc-country-select'), self::VERSION, true );
 
             $places = json_encode( self::get_places() );
             wp_localize_script( 'wc-city-select', 'wc_city_select_params', array(
@@ -261,15 +250,6 @@ class WC_States_Places_Colombia
         $path = self::$plugin_path = plugin_dir_path( self::$file );
 
         return untrailingslashit($path);
-    }
-
-    /**
-     * Get Store allowed countries
-     * @return mixed
-     */
-    private static function get_store_allowed_countries()
-    {
-        return array_merge( WC()->countries->get_allowed_countries(), WC()->countries->get_shipping_countries() );
     }
 
     /**
