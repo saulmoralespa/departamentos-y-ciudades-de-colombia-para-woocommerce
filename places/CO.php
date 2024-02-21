@@ -1114,6 +1114,7 @@ $places['CO'] = array(
         "Barbosa",
         "Barichara",
         "Barrancabermeja",
+        "Betulia",
         "Bolivar",
         "Bucaramanga",
         "Capitanejo",
