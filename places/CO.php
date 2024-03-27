@@ -225,7 +225,26 @@ $places['CO'] = array(
         "Usiacuri"
 		),
 	'BOG' => array(
-	    'Bogotá'
+	    'Antonio Nariño',
+        'Barrios Unidos',
+        'Bosa',
+        'Chapinero',
+        'Ciudad Bolívar',
+        'Engativá',
+        'Fontibón',
+        'Kennedy',
+        'La Candelaria',
+        'Los Mártires',
+        'Puente Aranda',
+        'Rafael Uribe Uribe',
+        'San Cristóbal',
+        'Santa Fe',
+        'Suba',
+        'Sumapaz',
+        'Teusaquillo',
+        'Tunjuelito',
+        'Usaquén',
+        'Usme'
     ),
 	'BOL' => array(
         "Achi",
