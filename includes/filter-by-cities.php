@@ -187,7 +187,7 @@ function filters_by_cities_method() {
                 $cities = array();
 
                 foreach ($zones as $zone){
-                    if (strpos($zone->code, ':') !== false){
+                    if (str_contains($zone->code, ':')){
                         $place = explode(':', $zone->code );
                         $states = WC_States_Places_Colombia::get_places( $place[0] );
                         $cities =  array_merge($cities,$this->orderArray($states[$place[1]]));

@@ -4,13 +4,13 @@
  * Colombia places
  *
  * @author   Saul Morales Pacheco <moralespachecopablo@gmail.com>
- * @version  2.0.17
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @version  2.0.19
+ * @license https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  */
 global $places;
 
-$places['CO'] = array(
-	'AMZ' => array(
+$places[ 'CO' ] = array(
+    'AMZ' => array(
         "El encanto",
         "La Chorrera",
         "La Pedrera",
@@ -22,8 +22,8 @@ $places['CO'] = array(
         "Puerto Nariño",
         "Puerto Santander",
         "Tarapacá"
-		),
-	'ANT' => array(
+    ),
+    'ANT' => array(
         "Abejorral",
         "Abriaqui",
         "Alejandria",
@@ -176,8 +176,8 @@ $places['CO'] = array(
         "Yondo casabe",
         "Zaragoza",
         "Zungo carretera"
-		),
-	'ARU' => array(
+    ),
+    'ARU' => array(
         "Arauca",
         "Arauquita",
         "Cravo norte",
@@ -188,8 +188,8 @@ $places['CO'] = array(
         "Puerto rondon",
         "Saravena",
         "Tame"
-		),
-	'ATL' => array(
+    ),
+    'ATL' => array(
         "Arroyo de piedra",
         "Baranoa",
         "Barranquilla",
@@ -223,11 +223,11 @@ $places['CO'] = array(
         "Suan",
         "Tubara",
         "Usiacuri"
-		),
-	'BOG' => array(
-	    'Bogotá'
     ),
-	'BOL' => array(
+    'BOG' => array(
+        'Bogotá'
+    ),
+    'BOL' => array(
         "Achi",
         "Arenal",
         "Arjona",
@@ -279,8 +279,8 @@ $places['CO'] = array(
         "Turbana",
         "Villanueva",
         "Zambrano"
-		),
-	'BOY' => array(
+    ),
+    'BOY' => array(
         "Almeida",
         "Aquitania",
         "Arcabuco",
@@ -409,8 +409,8 @@ $places['CO'] = array(
         "Villa de leyva",
         "Viracacha",
         "Zetaquira"
-		),
-	'CAL' => array(
+    ),
+    'CAL' => array(
         "Aguadas",
         "Anserma",
         "Aranzazu",
@@ -453,8 +453,8 @@ $places['CO'] = array(
         "Victoria",
         "Villamaria",
         "Viterbo"
-		),
-	'CAQ' => array(
+    ),
+    'CAQ' => array(
         "Albania",
         "Belen de los andaquies",
         "Cartagena del chaira",
@@ -470,8 +470,8 @@ $places['CO'] = array(
         "San vicente del caguan",
         "Solita",
         "Valparaiso"
-		),
-	'CAS' => array(
+    ),
+    'CAS' => array(
         "Aguaclara",
         "Aguazul",
         "Araguaney",
@@ -496,8 +496,8 @@ $places['CO'] = array(
         "Villacarola",
         "Villanueva",
         "Yopal"
-		),
-	'CAU' => array(
+    ),
+    'CAU' => array(
         "Almaguer",
         "Argelia",
         "Balboa",
@@ -539,8 +539,8 @@ $places['CO'] = array(
         "Toribio",
         "Totoró",
         "Villa Rica"
-		),
-	'CES' => array(
+    ),
+    'CES' => array(
         "Aguachica",
         "Arjona",
         "Astrea",
@@ -572,8 +572,8 @@ $places['CO'] = array(
         "San roque",
         "Tamalameque",
         "Valledupar"
-		),
-	'CHO'  => array(
+    ),
+    'CHO' => array(
         "Acandi",
         "Alto baudo",
         "Andagoya",
@@ -601,8 +601,8 @@ $places['CO'] = array(
         "Tutunendo",
         "Unguia",
         "Yuto"
-		),
-	'COR' => array(
+    ),
+    'COR' => array(
         "Ayapel",
         "Buena vista",
         "Canalete",
@@ -641,8 +641,8 @@ $places['CO'] = array(
         "Tuchin",
         "Valencia",
         "Villa fatima"
-		),
-	'CUN' => array(
+    ),
+    'CUN' => array(
         "Agua de dios",
         "Alban",
         "Anapoima",
@@ -780,8 +780,8 @@ $places['CO'] = array(
         "Yacopi",
         "Zipacon",
         "Zipaquira"
-		),
-	'GUA' => array(
+    ),
+    'GUA' => array(
         "Cacahual",
         "Guaviare",
         "Inirida",
@@ -789,14 +789,14 @@ $places['CO'] = array(
         "Pana Pana",
         "Puerto Colombia",
         "San Felipe"
-		),
-	'GUV' => array(
+    ),
+    'GUV' => array(
         "Calamar",
         "El Retorno",
         "Miraflores",
         "San jose del guaviare"
-		),
-	'HUI' => array(
+    ),
+    'HUI' => array(
         "Acevedo",
         "Agrado",
         "Aipe",
@@ -837,8 +837,8 @@ $places['CO'] = array(
         "Vegalarga",
         "Villa vieja",
         "Yaguara"
-		),
-	'GUJ' => array(
+    ),
+    'GUJ' => array(
         "Albania",
         "Barrancas",
         "Buenavista",
@@ -855,8 +855,8 @@ $places['CO'] = array(
         "Uribia",
         "Urumita",
         "Villanueva"
-		),
-	'MAG' => array(
+    ),
+    'MAG' => array(
         "Algarrobo",
         "Aracataca",
         "Cerro san antonio",
@@ -898,8 +898,8 @@ $places['CO'] = array(
         "Taganga",
         "Tenerife",
         "Tucurinca"
-		),
-	'MET' => array(
+    ),
+    'MET' => array(
         "Acacias",
         "Apiay",
         "Barranca de upia",
@@ -922,8 +922,8 @@ $places['CO'] = array(
         "Uribe",
         "Villavicencio",
         "Vista hermosa"
-		),
-	'NAR' => array(
+    ),
+    'NAR' => array(
         "Aldana",
         "Altaquer",
         "Ancuya",
@@ -1009,8 +1009,8 @@ $places['CO'] = array(
         "Tumaco",
         "Tuquerres",
         "Yacuanquer"
-		),
-	'NOR' => array(
+    ),
+    'NOR' => array(
         "Ábrego",
         "Arboledas",
         "Bochalema",
@@ -1049,8 +1049,8 @@ $places['CO'] = array(
         "Toledo",
         "Villa Caro",
         "Villa del Rosario"
-		),
-	'PUT' => array(
+    ),
+    'PUT' => array(
         "Colon",
         "El tigre",
         "La dorada san miguel",
@@ -1067,8 +1067,8 @@ $places['CO'] = array(
         "Santiago",
         "Sibundoy",
         "Villagarzon"
-		),
-	'QUI' => array(
+    ),
+    'QUI' => array(
         "Armenia",
         "Barcelona",
         "Buenavista",
@@ -1082,8 +1082,8 @@ $places['CO'] = array(
         "Pijao",
         "Quimbaya",
         "Salento"
-		),
-	'RIS' => array(
+    ),
+    'RIS' => array(
         "Apia",
         "Balboa",
         "Belén de Umbria",
@@ -1100,13 +1100,13 @@ $places['CO'] = array(
         "San Clemente",
         "Santa Rosa de Cabal",
         "Santuario"
-		),
-	'SAP' => array(
+    ),
+    'SAP' => array(
         "Providencia",
         "San andres isla",
         "Santa catalina"
-		),
-	'SAN'  => array(
+    ),
+    'SAN' => array(
         "Acapulco",
         "Aguada",
         "Aratoca",
@@ -1179,8 +1179,8 @@ $places['CO'] = array(
         "Velez",
         "Villanueva",
         "Zapatoca"
-		),
-	'SUC' => array(
+    ),
+    'SUC' => array(
         "Caimito",
         "Corozal",
         "Coveñas",
@@ -1201,8 +1201,8 @@ $places['CO'] = array(
         "Sucre",
         "Tolu",
         "Tolu viejo"
-		),
-	'TOL' => array(
+    ),
+    'TOL' => array(
         "Alpujarra",
         "Alvarado",
         "Ambalema",
@@ -1283,8 +1283,8 @@ $places['CO'] = array(
         "Villahermosa",
         "Villarestrepo",
         "Villa rica"
-		),
-	'VAC' => array(
+    ),
+    'VAC' => array(
         "Alcala",
         "Andalucía",
         "Ansermanuevo",
@@ -1329,8 +1329,8 @@ $places['CO'] = array(
         "Yotoco",
         "Yumbo",
         "Zarzal"
-		),
-	'VAU' => array(
+    ),
+    'VAU' => array(
         "Acaricuara",
         "Carurú",
         "Mitu",
@@ -1338,11 +1338,11 @@ $places['CO'] = array(
         "Taraira",
         "Tío barbas",
         "Yavaraté"
-	    ),
-	'VIC' => array(
+    ),
+    'VIC' => array(
         "Cumaribo",
         "La primavera",
         "Puerto carreño",
         "Santa rosalia"
-		)
-	);
+    )
+);

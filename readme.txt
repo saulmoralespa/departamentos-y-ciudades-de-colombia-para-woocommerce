@@ -1,14 +1,13 @@
 === Departamentos y Ciudades de Colombia para Woocommerce ===
 Contributors: saulmorales
 Donate link: https://saulmoralespa.com/donation
-Tags: woocommerce, Colombia, departamentos, ciudades, states cities,woocommerce departamentos de Colombia, woocommerce ciudades de Colombia, desplegable, departamentos desplegables, ciudades desplegables, city dropdown, state dropdown, city select, cities select,
-seleccionar ciudades,seleccionar departamentos
-Requires PHP: 7.3
+Tags: Colombia, departamentos, ciudades,woocommerce departamentos de Colombia, woocommerce ciudades de Colombia
+Requires PHP: 8.0
 Requires at least: 6.0
-Tested up to: 6.4.2
-Stable tag: 2.0.17
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tested up to: 6.5.4
+Stable tag: 2.0.19
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 WordPress plugin that shows dropdowns for State and City Select for WooCommerce
 
@@ -84,52 +83,6 @@ Only major cities of each department.
 6. Reflection shipping rule by city
 
 == Changelog ==
-= 1.0 =
-* 24/10/2016 First release.
-= 1.1 =
-* Added Bogotá D.C as state and localities.
-= 1.1.2 =
-* Eliminated localities of Bogotá D.C
-= 1.1.3 =
-* Added method shipping filter for city
-= 1.1.4 =
-* added languages Spanish Colombia and fixed state
-= 1.1.7 =
-* added cost of shipping class
-= 1.1.17 =
-* added new cities
-= 1.1.18 =
-* fixed delete other methods shipping
-= 1.1.19 =
-* added optional single method
-= 1.1.20 =
-* added order of fields state and city
-= 1.1.21 =
-* update readme version Woocommerce
-= 1.1.22 =
-* update readme version
-= 1.1.23 =
-* update cities
-= 1.1.24 =
-* update notices
-= 1.1.25 =
-* update city Codazzi, Cesar
-= 1.1.26 =
-* fixed class cost
-= 1.1.27 =
-*  Updated wp compatible version
-= 1.1.28 =
-*  Updated priority states and places
-= 1.1.29 =
-*  compatibility with version 5.5  of WordPress
-= 1.1.30 =
-*  Added cities in Antioquia and Casanare
-= 1.1.31 =
-*  Updated cities in Cauca and Valle del Cauca
-= 1.1.32 =
-* Updated readme version WordPress
-= 1.1.33 =
-* Updated readme version WordPress
 = 2.0.0 =
 * Added Bogotá D.C as state and localities
 = 2.0.1 =
@@ -149,11 +102,11 @@ Only major cities of each department.
 = 2.0.8 =
 * * Updated container in place-select.js
 = 2.0.9 =
-* Updated compatibility for MultiVendorX
+* Updated compatibility with MultiVendorX
 = 2.0.10 =
 * Updated wp compatible version
 = 2.0.11 =
-* *Updated wp compatible version
+* Updated wp compatible version
 = 2.0.12 =
 * Fixed function is_plugin_active
 = 2.0.13 =
@@ -167,3 +120,14 @@ Only major cities of each department.
 *  Added city Los santos of Santander
 = 2.0.17 =
 *  Added city Betulia of Santander
+= 2.0.18 =
+* Updated compatibility with FunnelKit Checkout
+= 2.0.19 =
+* Fixed load states
+* Fixed load selectWoo, used strategy defer
+
+== Additional Info ==
+**Contribute** [repository on github](https://github.com/saulmoralespa/departamentos-y-ciudades-de-colombia-para-woocommerce)
+
+== Credits ==
+*  [Website](https://saulmoralespa.com) [Linkedin](https://www.linkedin.com/in/saulmoralespa)

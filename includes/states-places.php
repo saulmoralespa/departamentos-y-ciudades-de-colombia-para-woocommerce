@@ -3,7 +3,7 @@
 class WC_States_Places_Colombia
 {
 
-    const VERSION = '2.0.17';
+    const VERSION = '2.0.19';
     const CODE_COUNTRY = 'CO';
     private static $places;
 
@@ -52,13 +52,13 @@ class WC_States_Places_Colombia
 
     /**
      * Implement WC States
-     * @param mixed $states
-     * @return mixed
+     * @param array $states
+     * @return array
      */
-    public function wc_states($states)
+    public function wc_states(array $states): array
     {
         if (file_exists(self::get_plugin_path() . '/states/' . self::CODE_COUNTRY . '.php')) {
-            include(self::get_plugin_path() . '/states/' . self::CODE_COUNTRY . '.php');
+            $states[self::CODE_COUNTRY] = include(self::get_plugin_path() . '/states/' . self::CODE_COUNTRY . '.php');
         }
 
         return $states;
@@ -155,7 +155,7 @@ class WC_States_Places_Colombia
 
             if ( $current_sc ) {
                 $dropdown_places = $places[ $current_sc ];
-            } else if ( is_array($places) &&  isset($places[0])) {
+            } else if (isset($places[0])) {
                 $dropdown_places = array_reduce( $places, 'array_merge', array() );
                 sort( $dropdown_places );
             } else {
@@ -199,7 +199,7 @@ class WC_States_Places_Colombia
         }
 
         if ( ! is_null( $p_code ) ) {
-            return isset( self::$places[ $p_code ] ) ? self::$places[ $p_code ] : false;
+            return self::$places[$p_code] ?? false;
         } else {
             return self::$places;
         }
@@ -228,7 +228,7 @@ class WC_States_Places_Colombia
         $is_page = apply_filters( 'departamentos_ciudades_colombia_para_woocommerce_is_page', $is_page );
         if ( $is_page ) {
             $city_select_path = self::get_plugin_url() . 'js/place-select.js';
-            wp_enqueue_script( 'wc-city-select', $city_select_path, array( 'jquery', 'wc-country-select'), self::VERSION, true );
+            wp_enqueue_script( 'wc-city-select', $city_select_path, array( 'jquery', 'wc-country-select'), self::VERSION, ['strategy' => 'defer'] );
 
             $places = json_encode( self::get_places() );
             wp_localize_script( 'wc-city-select', 'wc_city_select_params', array(
