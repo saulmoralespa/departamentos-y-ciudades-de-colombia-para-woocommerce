@@ -86,7 +86,7 @@
   });
 
     elBodyDPWoo.on( 'change', 'select.state_select, #calc_shipping_state', function() {
-    var $container = $( this ).closest( 'div.woocommerce-billing-fields, div.woocommerce-shipping-fields, form.woocommerce-shipping-calculator, form.mvx_shop_settings_form' );
+    var $container = $( this ).closest( 'div.woocommerce-billing-fields, div.woocommerce-shipping-fields, form.woocommerce-shipping-calculator, div.woocommerce-address-fields, form.mvx_shop_settings_form' );
     var country = $container.find( '#billing_country, #shipping_country, #calc_shipping_country, #vendor_country' ).val();
     var state = $( this ).val();
     $( document.body ).trigger( 'state_changing', [country, state, $container ] );
