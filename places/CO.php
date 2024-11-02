@@ -278,6 +278,7 @@ $places[ 'CO' ] = array(
         "Turbaco",
         "Turbana",
         "Villanueva",
+        "Villamaria",
         "Zambrano"
     ),
     'BOY' => array(
@@ -296,6 +297,7 @@ $places[ 'CO' ] = array(
         "Caldas",
         "Campohermoso",
         "Cerinza",
+        "Cienaga",
         "Chinavita",
         "Chiquinquira",
         "Chiquiza",
@@ -495,6 +497,7 @@ $places[ 'CO' ] = array(
         "Trinidad",
         "Villacarola",
         "Villanueva",
+        "Villamaria",
         "Yopal"
     ),
     'CAU' => array(
@@ -1091,6 +1094,7 @@ $places[ 'CO' ] = array(
         "Guática",
         "Irra",
         "La Celia",
+        "La florida",
         "La Virginia",
         "Marsella",
         "Mistrato",
@@ -1178,6 +1182,7 @@ $places[ 'CO' ] = array(
         "Valle de san jose",
         "Velez",
         "Villanueva",
+        "Villamaria",
         "Zapatoca"
     ),
     'SUC' => array(
