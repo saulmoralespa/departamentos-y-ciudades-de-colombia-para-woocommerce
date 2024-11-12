@@ -6,11 +6,19 @@
  * Time: 05:32 PM
  */
 
-function filters_by_cities_method() {
+ function filters_by_cities_method() {
     if ( ! class_exists( 'Filters_By_Cities_Method' ) ) {
 
         class Filters_By_Cities_Method extends WC_Shipping_Method
         {
+            /**
+             * Class properties declaration
+             */
+            protected $single_method;
+            protected $cost;
+            protected $cities;
+            protected $type;
+            protected $fee_cost;
 
             /**
              * Constructor for your shipping class
@@ -20,11 +28,10 @@ function filters_by_cities_method() {
              */
             public function __construct($instance_id = 0)
             {
-
                 parent::__construct($instance_id);
 
                 $this->id                 = 'filters_by_cities_shipping_method';
-                $this->instance_id				= absint( $instance_id );
+                $this->instance_id        = absint( $instance_id );
                 $this->method_title       = __( 'Shipping filter By Cities', 'departamentos-y-ciudades-de-colombia-para-woocommerce' );
                 $this->method_description = __( 'Allows adding rules by city', 'departamentos-y-ciudades-de-colombia-para-woocommerce' );
 
@@ -53,7 +60,6 @@ function filters_by_cities_method() {
                 $this->cost = $this->get_option( 'cost' );
                 $this->cities = $this->get_option( 'cities' );
                 $this->type = $this->get_option( 'type', 'class' );
-
 
                 $this->init_form_fields();
                 $this->init_settings();
