@@ -11,6 +11,14 @@ function filters_by_cities_method() {
 
         class Filters_By_Cities_Method extends WC_Shipping_Method
         {
+            /**
+             * Class properties declaration
+             */
+            protected $single_method;
+            protected $cost;
+            protected $cities;
+            protected $type;
+            protected $fee_cost;
 
             /**
              * Constructor for your shipping class
@@ -20,7 +28,6 @@ function filters_by_cities_method() {
              */
             public function __construct($instance_id = 0)
             {
-
                 parent::__construct($instance_id);
 
                 $this->id                 = 'filters_by_cities_shipping_method';
