@@ -4,8 +4,8 @@ Donate link: https://saulmoralespa.com/donation
 Tags: Colombia, departamentos, ciudades,woocommerce departamentos de Colombia, woocommerce ciudades de Colombia
 Requires PHP: 8.0
 Requires at least: 6.0
-Tested up to: 6.6.2
-Stable tag: 2.0.20
+Tested up to: 6.7.2
+Stable tag: 2.0.21
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -26,8 +26,7 @@ This will be shown in checkout pages, edit addresses pages, shipping calculator,
 
 WordPress 6.0  or greater
 Woocommerce 2.2 or greater
-PHP version 7.3 or greater
-MySQL version 5.0 or greater
+PHP version 8.0 or greater
 
 = Automatic installation =
 
@@ -127,6 +126,8 @@ Only major cities of each department.
 * Fixed load selectWoo, used strategy defer
 = 2.0.20 =
 * Fixed load cities in my account
+= 2.0.21 =
+* Updated wp compatible version
 
 == Additional Info ==
 **Contribute** [repository on github](https://github.com/saulmoralespa/departamentos-y-ciudades-de-colombia-para-woocommerce)
