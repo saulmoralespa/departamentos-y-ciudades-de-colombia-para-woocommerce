@@ -153,8 +153,10 @@ class WC_States_Places_Colombia
 
             $field .= '<option value="">'. __( 'Select an option&hellip;', 'woocommerce' ) .'</option>';
 
+            $dropdown_places = [];
+
             if ( $current_sc ) {
-                $dropdown_places = $places[ $current_sc ];
+                $dropdown_places = $places[ $current_sc ] ?? [];
             } else if (isset($places[0])) {
                 $dropdown_places = array_reduce( $places, 'array_merge', array() );
                 sort( $dropdown_places );

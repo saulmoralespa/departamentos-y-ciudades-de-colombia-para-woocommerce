@@ -5,7 +5,7 @@ Tags: Colombia, departamentos, ciudades,woocommerce departamentos de Colombia, w
 Requires PHP: 8.0
 Requires at least: 6.0
 Tested up to: 6.7.2
-Stable tag: 2.0.21
+Stable tag: 2.0.22
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -128,6 +128,8 @@ Only major cities of each department.
 * Fixed load cities in my account
 = 2.0.21 =
 * Updated wp compatible version
+= 2.0.22 =
+* Fixed undefined variable in states-places.php
 
 == Additional Info ==
 **Contribute** [repository on github](https://github.com/saulmoralespa/departamentos-y-ciudades-de-colombia-para-woocommerce)
